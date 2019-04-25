@@ -3,8 +3,6 @@ version: 0.2
 env:
   variables:
     - echo declare your environment variables here...
-  parameter-store:
-    - echo declare any parameters...
 phases:
   install:
     commands:
