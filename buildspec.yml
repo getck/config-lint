@@ -1,8 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    - echo declare your environment variables here...
 phases:
   install:
     commands:
