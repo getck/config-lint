@@ -1,0 +1,29 @@
+version: 0.2
+
+env:
+  variables:
+    - echo declare your environment variables here...
+  parameter-store:
+    - echo declare any parameters...
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - tar -xvzf config-lint_0.0.35_Linux_x86_64.tar.gz
+    finally:
+      - echo This always runs even if the update or install command fails 
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - ./config-lint -terraform config-input/*.tf 
+    finally:
+      - echo This always runs even if the install command fails
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
