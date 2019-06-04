@@ -7,7 +7,7 @@ The configurations files can be one of several formats, such as Terraform, JSON,
 There is a built-in set of rules provided for Terraform. Custom files are used
 for other formats.
 
-# Installation 
+# Installations 
 You can use [Homebrew](https://brew.sh/) to install the latest version:
 
 ```
